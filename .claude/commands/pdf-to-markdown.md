@@ -33,7 +33,7 @@ sudo dnf install poppler-utils
 
 ### 3. Install Python Dependencies
 ```bash
-cd ~/.claude/pai
+cd ~/.claude
 uv sync
 ```
 
@@ -123,7 +123,7 @@ done
 
 ### "pdf2image not found"
 ```bash
-cd ~/.claude/pai && uv sync
+cd ~/.claude && uv sync
 ```
 
 ### "poppler not installed"

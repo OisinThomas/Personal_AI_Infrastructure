@@ -1,0 +1,31 @@
+[project]
+name = "audio-transcription"
+version = "0.1.0"
+description = "Audio transcription tool with multiple modes"
+requires-python = ">=3.10"
+dependencies = [
+    # Async workflow
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-core>=0.3.0",
+    
+    # OpenAI API
+    "openai>=1.0.0",
+    
+    # Audio processing (no moviepy - audio only!)
+    "pydub>=0.25.1",
+    
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.66.0",
+    "aiofiles>=23.0.0",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["workflow"]
