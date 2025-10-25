@@ -3,13 +3,13 @@
 ## Quick Usage
 ```bash
 # Convert a PDF to markdown
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/report.pdf
+~/.claude/tools/pdf_to_markdown.py ~/Documents/report.pdf
 
 # Specify output directory
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/report.pdf --output-dir ~/Documents/markdown
+~/.claude/tools/pdf_to_markdown.py ~/Documents/report.pdf --output-dir ~/Documents/markdown
 
 # Use more workers for faster processing
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/report.pdf --workers 20
+~/.claude/tools/pdf_to_markdown.py ~/Documents/report.pdf --workers 20
 ```
 
 ## Installation
@@ -47,7 +47,7 @@ This will install:
 
 Set your OpenAI API key:
 ```bash
-# Add to ~/.claude/pai/.env
+# Add to ~/.claude/.env
 OPENAI_API_KEY_DEFAULT="your-openai-api-key-here"
 
 # Or export in your shell
@@ -58,20 +58,20 @@ export OPENAI_API_KEY_DEFAULT="your-openai-api-key-here"
 
 ### Basic Conversion
 ```bash
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/research-paper.pdf
+~/.claude/tools/pdf_to_markdown.py ~/Documents/research-paper.pdf
 # Output: ./pdf_output/research-paper.md
 ```
 
 ### Custom Output Directory
 ```bash
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/report.pdf \
+~/.claude/tools/pdf_to_markdown.py ~/Documents/report.pdf \
   --output-dir ~/Documents/converted
 ```
 
 ### Faster Processing (More Workers)
 ```bash
 # Use 20 parallel workers instead of default 10
-~/.claude/pai/tools/pdf_to_markdown.py ~/Documents/large-document.pdf \
+~/.claude/tools/pdf_to_markdown.py ~/Documents/large-document.pdf \
   --workers 20
 ```
 
@@ -79,7 +79,7 @@ export OPENAI_API_KEY_DEFAULT="your-openai-api-key-here"
 ```bash
 # Process multiple PDFs
 for pdf in ~/Documents/*.pdf; do
-  ~/.claude/pai/tools/pdf_to_markdown.py "$pdf" --output-dir ~/Documents/markdown
+  ~/.claude/tools/pdf_to_markdown.py "$pdf" --output-dir ~/Documents/markdown
 done
 ```
 
@@ -137,14 +137,14 @@ sudo apt-get install poppler-utils
 
 ### "OPENAI_API_KEY_DEFAULT not set"
 ```bash
-# Add to ~/.claude/pai/.env
-echo 'OPENAI_API_KEY_DEFAULT="sk-..."' >> ~/.claude/pai/.env
+# Add to ~/.claude/.env
+echo 'OPENAI_API_KEY_DEFAULT="sk-..."' >> ~/.claude/.env
 ```
 
 ### Rate Limits
 If you hit OpenAI rate limits, reduce workers:
 ```bash
-~/.claude/pai/tools/pdf_to_markdown.py document.pdf --workers 5
+~/.claude/tools/pdf_to_markdown.py document.pdf --workers 5
 ```
 
 ## When to Use
