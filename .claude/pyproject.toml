@@ -1,0 +1,20 @@
+[project]
+name = "pai-tools"
+version = "0.1.0"
+description = "Personal AI Infrastructure Tools"
+requires-python = ">=3.10"
+dependencies = [
+    "pdf2image>=1.17.0",
+    "openai>=1.54.0",
+    "tqdm>=4.66.0",
+    "pillow>=10.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]
