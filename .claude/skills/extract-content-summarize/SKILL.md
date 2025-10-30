@@ -44,6 +44,8 @@ Use directly (skip to Step 2)
 
 **Output**: JSON file with timestamped transcript
 
+**Note**: The `markdown_builder.py` can extract specific keys from JSON files, so we'll use `"key": "transcript"` to extract just the transcript text when assembling the final document.
+
 ### Step 3: AI Analysis (Parallel Processing)
 
 Run both analyses simultaneously for efficiency:
@@ -117,10 +119,12 @@ python markdown_builder.py \
   --body '[
     {"header": "Summary", "type": "file", "path": "tmp/summary_TIMESTAMP.md"},
     {"header": "Reflection Questions", "type": "file", "path": "tmp/questions_TIMESTAMP.md"},
-    {"header": "Original Transcript", "type": "file", "path": "tmp/transcript.json"}
+    {"header": "Transcript", "type": "file", "path": "tmp/transcript.json", "key": "transcript"}
   ]' \
   --output ~/Documents/caideiseach/inbox/2025-10-29_video-title.md
 ```
+
+**Note**: The `"key": "transcript"` parameter extracts only the transcript text from the JSON file, not the entire JSON object.
 
 ## Model Selection
 
