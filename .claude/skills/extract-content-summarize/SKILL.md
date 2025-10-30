@@ -119,12 +119,12 @@ python markdown_builder.py \
   --body '[
     {"header": "Summary", "type": "file", "path": "tmp/summary_TIMESTAMP.md"},
     {"header": "Reflection Questions", "type": "file", "path": "tmp/questions_TIMESTAMP.md"},
-    {"header": "Transcript", "type": "file", "path": "tmp/transcript.json", "key": "transcript"}
+    {"header": "Transcript", "type": "json", "path": "tmp/transcript.json", "keys": ["transcript"]}
   ]' \
   --output ~/Documents/caideiseach/inbox/2025-10-29_video-title.md
 ```
 
-**Note**: The `"key": "transcript"` parameter extracts only the transcript text from the JSON file, not the entire JSON object.
+**Note**: The `"type": "json"` with `"keys": ["transcript"]` extracts only the transcript text from the JSON file, not the entire JSON object.
 
 ## Model Selection
 
@@ -171,9 +171,9 @@ created_date: 2025-10-29
 
 [AI-generated questions organized by category]
 
-## Original Transcript
+## Transcript
 
-[Full timestamped transcript]
+[Full timestamped transcript extracted from JSON]
 ```
 
 ## Thread ID Tracking
@@ -240,7 +240,7 @@ python markdown_builder.py \
   --body '[
     {"header": "Summary", "type": "file", "path": "tmp/summary_20251029.md"},
     {"header": "Reflection Questions", "type": "file", "path": "tmp/questions_20251029.md"},
-    {"header": "Transcript", "type": "file", "path": "tmp/transcript.json"}
+    {"header": "Transcript", "type": "file", "path": "tmp/transcript.json", "key": "transcript"}
   ]' \
   --output ~/Documents/caideiseach/inbox/2025-10-29_never-gonna-give-you-up.md
 ```
