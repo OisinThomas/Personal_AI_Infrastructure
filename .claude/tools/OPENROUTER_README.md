@@ -86,6 +86,7 @@ The tool provides convenient shortcuts for common models:
 | `claude-haiku` | `anthropic/claude-haiku-4.5` |
 | `claude-sonnet-4.5` | `anthropic/claude-sonnet-4.5` |
 | `claude-haiku-4.5` | `anthropic/claude-haiku-4.5` |
+| `openai-o3` | `openai/o3` |
 
 ### Adding New Models
 

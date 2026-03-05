@@ -200,7 +200,12 @@ python openrouter_call.py \
 - `~/.claude/tools/tmp/responses/THREAD_ID_response.json` - Raw API responses
 
 **Final Output**:
-- `~/Documents/caideiseach/inbox/YYYY-MM-DD_title.md` - Complete zettelkasten note
+For youtube videos:
+- `~/Documents/caideiseach/youtube/YYYY-MM-DD_title.md` - Complete zettelkasten note (please santisise the title to remove -/:/[/]/etc.)
+For podcasts:
+- `~/Documents/caideiseach/podcasts/YYYY-MM-DD_title.md` - Complete zettelkasten note (please santisise the title to remove -/:/[/]/etc.)
+For podcasts:
+
 
 ## Complete Example
 

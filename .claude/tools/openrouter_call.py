@@ -73,6 +73,7 @@ MODELS = {
     'claude-haiku-4.5': 'anthropic/claude-haiku-4.5',
     'claude-sonnet': 'anthropic/claude-sonnet-4.5',  # Alias
     'claude-haiku': 'anthropic/claude-haiku-4.5',    # Alias
+    'o3': 'openai/o3'
 }
 
 # Global error tracking
